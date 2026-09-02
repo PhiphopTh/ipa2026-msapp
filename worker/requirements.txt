@@ -1,0 +1,5 @@
+pika
+netmiko
+ntc-templates
+pymongo
+python-dotenv
