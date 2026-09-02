@@ -39,7 +39,7 @@ def delete_router(id):
 @app.route("/router/<router_ip>", methods=["GET"])
 def router_detail(router_ip):
     logs = list(
-        interface_status.find({"router_ip": router_ip}).sort("timestamp", -1).limit(3)
+        interface_status.find({"router_ip": router_ip}).sort("timestamp", -1).limit(5)
     )
     return render_template("router_detail.html", router_ip=router_ip, logs=logs)
 

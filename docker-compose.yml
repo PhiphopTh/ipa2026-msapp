@@ -55,6 +55,8 @@ services:
       context: ./worker
       dockerfile: Dockerfile
     restart: always
+    deploy:
+      replicas: 3
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
