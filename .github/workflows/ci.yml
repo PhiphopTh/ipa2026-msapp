@@ -24,7 +24,7 @@ jobs:
         pip install flake8 black
 
     - name: Run flake8 (Lint)
-      run: flake8 .
+      run: flake8 . --max-line-length=88 --extend-ignore=E501
 
     - name: Check code format with black
       run: black --check .
